@@ -1,7 +1,9 @@
 "use client";
 import Image from "next/image";
+import { useState } from "react";
 
 function FormPage() {
+  const [formData, setFormData] = useState([]);
   function submitHandler(e) {
     e.preventDefault();
     console.log("form submitted");
@@ -9,18 +11,18 @@ function FormPage() {
   return (
     <div className="p-10 bg-black h-screen flex">
       <div className="flex w-full shadow-2xl rounded-2xl overflow-hidden">
-        <div className="w-7/10">
+        <div className="w-7/10 hidden lg:block lg:w-6/10">
           <Image
             src="/images/main.jpg"
-            height={800}
-            width={800}
+            height={900}
+            width={900}
             alt="img"
             className="h-full w-full"
           />
         </div>
         <form
-          className="w-3/10 flex flex-col justify-center px-24 gap-4 shadow-2xl bg-white text-black"
-          onSubmit={(e) => submitHandler}
+          className="w-full lg:w-4/10 flex flex-col justify-center px-4 md:px-24 gap-4 shadow-2xl bg-white text-black "
+          onSubmit={(e) => submitHandler(e)}
         >
           <h1 className="text-4xl">Login</h1>
           <div className="flex flex-col">
