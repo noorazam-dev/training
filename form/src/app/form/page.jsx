@@ -1,54 +1,41 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import "../styles/FormPage.scss";
 
 function FormPage() {
   const [formData, setFormData] = useState([]);
+
   function submitHandler(e) {
     e.preventDefault();
     console.log("form submitted");
   }
+
   return (
-    <div className="p-10 bg-black h-screen flex">
-      <div className="flex w-full shadow-2xl rounded-2xl overflow-hidden">
-        <div className="w-7/10 hidden lg:block lg:w-6/10">
+    <div className="form-container">
+      <div className="form-wrapper">
+        <div className="form-image">
           <Image
             src="/images/main.jpg"
-            height={900}
-            width={900}
+            height={500}
+            width={500}
             alt="img"
-            className="h-full w-full"
+            className="image"
           />
         </div>
-        <form
-          className="w-full lg:w-4/10 flex flex-col justify-center px-4 md:px-24 gap-4 shadow-2xl bg-white text-black "
-          onSubmit={(e) => submitHandler(e)}
-        >
-          <h1 className="text-4xl">Login</h1>
-          <div className="flex flex-col">
+        <form className="form-content" onSubmit={submitHandler}>
+          <h1 className="form-title">Login</h1>
+          <div className="form-group">
             <label htmlFor="email">Email</label>
-            <input
-              type="text"
-              placeholder="email"
-              name="email"
-              className="mt-1 text-xl focus:border-none focus:outline-none"
-            />
+            <input type="text" placeholder="email" name="email" />
             <hr />
           </div>
-          <div className="flex flex-col">
+          <div className="form-group">
             <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              placeholder="password"
-              name="password"
-              className="mt-1 text-xl focus:border-none focus:outline-none"
-            />
+            <input type="password" placeholder="password" name="password" />
             <hr />
           </div>
-          <button
-            type="submit"
-            className="w-32 bg-black text-white py-2 rounded"
-          >
+          <button type="submit" className="submit-btn">
             Log In
           </button>
         </form>
