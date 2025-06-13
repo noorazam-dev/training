@@ -41,7 +41,7 @@ function LoginPage() {
           </Link>
 
           <p>
-            Don't have an account?{" "}
+            Don't have an account?
             <Link href="/signup" className="sign-up">
               Sign up
             </Link>

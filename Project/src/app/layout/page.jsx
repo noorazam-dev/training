@@ -1,5 +1,5 @@
 import Products from "@/commonComponents/Products";
-import Header from "@/components/header";
+import Header from "@/commonComponents/header";
 import Sidebar from "@/components/sidebar";
 import "@/styles/main.scss";
 export default function Wrapper() {

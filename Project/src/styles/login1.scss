@@ -38,18 +38,31 @@ $text-color: #747474;
   width: 100%;
 
   @media (max-width: 800px) {
-    @include flex-property;
     min-height: 100%;
+    background-image: url("/images/mosquelogin.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .form-image {
+      display: none;
+    }
+
+    .form-content {
+      padding: 10px 25px;
+
+      p {
+        color: rgb(255, 255, 255);
+        font-size: 1rem;
+      }
+      .sign-up {
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+    }
   }
 
   @media (max-width: 600px) {
-    .form-image {
-      height: 10vh;
-    }
-    .form-content {
-      padding: 0px 8px;
-    }
-
     .form-title {
       font-size: 24px;
     }
