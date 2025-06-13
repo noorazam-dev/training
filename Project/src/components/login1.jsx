@@ -17,6 +17,8 @@ function LoginPage() {
             height={500}
             width={500}
             alt="img"
+            loading="lazy"
+            priority={false}
             className="image"
           />
         </div>
@@ -24,10 +26,8 @@ function LoginPage() {
           <h1 className="form-title">Login to Your Account</h1>
 
           <div className="form-group">
-            <label htmlFor="email">Email</label>
             <input type="text" placeholder="email" name="email" id="email" />
 
-            <label htmlFor="password">Password</label>
             <input
               type="password"
               placeholder="password"

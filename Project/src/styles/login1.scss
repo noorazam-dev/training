@@ -19,12 +19,13 @@ $text-color: #747474;
 
 .form-container {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #131313;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .form-wrapper {
@@ -35,10 +36,28 @@ $text-color: #747474;
   overflow: hidden;
   max-width: 1000px;
   width: 100%;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 
-  @media (max-width: 768px) {
-    flex-direction: column;
+  @media (max-width: 800px) {
+    @include flex-property;
+    min-height: 100%;
+  }
+
+  @media (max-width: 600px) {
+    .form-image {
+      height: 10vh;
+    }
+    .form-content {
+      padding: 0px 8px;
+    }
+
+    .form-title {
+      font-size: 24px;
+    }
+
+    .google-btn {
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -116,7 +135,9 @@ $text-color: #747474;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  width: 16rem;
+  margin: auto;
+  font-size: 0.9rem;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
     0 0 20px rgba(255, 255, 255, 0.6);
 }
