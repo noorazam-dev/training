@@ -20,26 +20,38 @@ function LoginPage() {
             className="image"
           />
         </div>
-        <form className="form-content" onSubmit={(e) => submitHandler(e)}>
+        <form className="form-content" onSubmit={submitHandler}>
           <h1 className="form-title">Login to Your Account</h1>
+
           <div className="form-group">
-            <input type="text" placeholder="email" name="email" />
-            <input type="password" placeholder="password" name="password" />
+            <label htmlFor="email">Email</label>
+            <input type="text" placeholder="email" name="email" id="email" />
+
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              placeholder="password"
+              name="password"
+              id="password"
+            />
           </div>
-          <Link href="#" className="forgot-paasword">
+
+          <Link href="/forgot-password" className="forgot-password">
             Forgot Password
           </Link>
+
           <p>
-            Don't have an acoount?{" "}
-            <Link href="#" className="sign-up">
+            Don't have an account?{" "}
+            <Link href="/signup" className="sign-up">
               Sign up
             </Link>
           </p>
+
           <div className="btn">
             <button type="submit" className="submit-btn">
               Login & Continue
             </button>
-            <button className="google-btn">
+            <button type="button" className="google-btn">
               <FcGoogle className="google-icon" />
               Sign In with Google
             </button>
