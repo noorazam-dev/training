@@ -1,0 +1,110 @@
+$radius: 6px;
+$font-size: 20px;
+
+@mixin btn {
+  padding: 10px;
+  font-size: $font-size;
+  border-radius: $radius;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@mixin flex-property {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #131313;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: full;
+  height: 100vh;
+  padding: 0px 140px;
+}
+
+.image {
+  width: 45vw;
+  height: full;
+}
+
+.form-content {
+  width: 55vw;
+  height: full;
+  padding: 55px 70px;
+  margin-top: -3px;
+  background: #e9e8e8eb;
+  @include flex-property;
+
+  p {
+    font-size: 20px;
+    color: #747474;
+  }
+}
+.form-title {
+  font-size: 30px;
+}
+
+.form-group {
+  @include flex-property;
+  gap: 20px;
+
+  input {
+    padding: 8px 15px;
+    font-size: $font-size;
+    border-radius: $radius;
+    border: 1px solid #747474;
+  }
+}
+
+.forgot-paasword {
+  text-align: right;
+  margin-top: 15px;
+  font-size: $font-size;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+.btn {
+  @include flex-property;
+  gap: 20px;
+}
+
+.submit-btn {
+  @include btn;
+  background-color: #ff1515;
+  color: #ffffff;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: $font-size;
+}
+
+.google-btn {
+  @include btn;
+  width: 20vw;
+  margin: auto;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: black;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+.google-icon {
+  font-size: $font-size;
+  margin-right: 8px;
+  margin-bottom: -6px;
+}

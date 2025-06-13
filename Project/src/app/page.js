@@ -1,9 +1,9 @@
-import Wrapper from "./layout/page";
+import LoginPage from "@/components/login1";
 
 export default function Home() {
   return (
     <div>
-      <Wrapper />
+      <LoginPage />
     </div>
   );
 }
