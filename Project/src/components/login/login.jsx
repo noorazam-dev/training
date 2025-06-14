@@ -11,7 +11,8 @@ function LoginPage() {
     e.preventDefault();
   }
   return (
-    <div className={styles.formContainer}>
+    <div className={styles.formContainer}>\
+
       <div className={styles.formWrapper}>
         <div className={styles.formImage}>
           <Image
