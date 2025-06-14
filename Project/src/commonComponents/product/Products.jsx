@@ -1,5 +1,5 @@
 "use client";
-import "@/styles/products.scss";
+import "./products.scss";
 import { useEffect, useState } from "react";
 
 export default function Products() {

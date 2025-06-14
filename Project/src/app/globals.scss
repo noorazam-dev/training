@@ -1,5 +1,7 @@
+// @import "~antd/dist/antd.css"; // core styles (can be skipped if using CSS-in-JS only)
+
 body {
-  font-family: var(--font-poppins);
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }

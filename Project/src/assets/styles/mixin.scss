@@ -1,0 +1,21 @@
+@use "../../assets/styles/variables.scss" as *;
+
+@mixin btn {
+  padding: $spacing-sm;
+  font-size: $font-md;
+  border-radius: $radius-sm;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
