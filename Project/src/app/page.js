@@ -1,9 +1,9 @@
-import LoginPage from "@/components/login/login";
+import PracticePage from "@/components/practice/practice";
 
 export default function Home() {
   return (
     <div>
-      <LoginPage />
+      <PracticePage />
     </div>
   );
 }

@@ -3,8 +3,8 @@ import Image from "next/image";
 import styles from "./login.module.scss";
 import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
-import Input from "@/commonComponents/uikit/input";
-import ButtonComp from "@/commonComponents/uikit/button";
+import Input from "@/commonComponents/uikit/Input";
+import ButtonComp from "@/commonComponents/uikit/Button";
 
 function LoginPage() {
   function submitHandler(e) {
@@ -58,10 +58,7 @@ function LoginPage() {
               className={styles.googleBtn}
               icon={<FcGoogle className={styles.googleIcon} />}
             />
-            {/* <button type="button" className={styles.googleBtn}>
-              <FcGoogle className={styles.googleIcon} />
-              Sign In with Google
-            </button> */}
+            
           </div>
         </form>
       </div>

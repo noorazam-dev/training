@@ -8,3 +8,4 @@ export default function ButtonComp({ name, className, icon }) {
     </Button>
   );
 }
+
