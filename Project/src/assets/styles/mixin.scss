@@ -1,4 +1,4 @@
-@use "../../assets/styles/variables.scss" as *;
+@use "./variables.scss" as *;
 
 @mixin btn {
   padding: $spacing-sm;
@@ -19,4 +19,25 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+
+.testimonialContainer {
+  @include flex-column;
+  gap: $spacing-sm;
+  padding: $spacing-md;
+  background-color: $background-dark;
+  color: $white;
+  border-radius: $radius-md;
+}
+
+@mixin transition($properties...) {
+  transition: $properties 0.3s ease-in-out;
+}
+
+@mixin hover-effect($hover-color) {
+  &:hover {
+    background-color: $hover-color;
+    cursor: pointer;
+  }
 }

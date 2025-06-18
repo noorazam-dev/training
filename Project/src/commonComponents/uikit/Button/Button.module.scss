@@ -1,0 +1,15 @@
+@use "../../../assets/styles/variables.scss" as *;
+@use "../../../assets/styles/mixins.scss" as *;
+
+.btn {
+  @include btn;
+  background-color: $primary-color;
+  color: $white;
+  @include mixins.transition(background-color, transform);
+  border-radius: $radius-sm;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    transform: scale(1.05);
+  }
+}

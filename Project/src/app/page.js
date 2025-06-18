@@ -1,9 +1,9 @@
-import PracticePage from "@/components/practice/practice";
+import NavigationTab from "@/commonComponents/NavigationTab/NavigationTab";
 
 export default function Home() {
   return (
     <div>
-      <PracticePage />
+      <NavigationTab />
     </div>
   );
 }

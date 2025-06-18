@@ -1,0 +1,11 @@
+@import "../../assets/styles/variables.scss";
+.container{
+    display: flex;
+    gap: 25px;
+}
+.heading {
+  font-size: $font-lg;
+  text-align: center;
+  color: $primary-color;
+  margin-bottom: $spacing-md;
+}

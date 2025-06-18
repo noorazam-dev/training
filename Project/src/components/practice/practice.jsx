@@ -1,8 +1,8 @@
-import CalenderComp from "@/commonComponents/uikit/Calendar";
-import CurrentDate from "@/commonComponents/uikit/CurrentDate";
-import CurrentTime from "@/commonComponents/uikit/CurrentTime";
-import Date from "@/commonComponents/uikit/Date";
-import Time from "@/commonComponents/uikit/Time";
+import CalenderComp from "@/commonComponents/uikit/Calendar/Calendar";
+import CurrentDate from "@/commonComponents/uikit/CurrentDate/CurrentDate";
+import CurrentTime from "@/commonComponents/uikit/CurrentTime/CurrentTime";
+import Date from "@/commonComponents/uikit/DatePiker/Date";
+import Time from "@/commonComponents/uikit/Time/Time";
 import styles from "@/components/practice/practice.module.scss";
 
 export default function PracticePage() {

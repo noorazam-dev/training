@@ -1,5 +1,6 @@
 import "./globals.scss";
 import { Poppins } from "next/font/google";
+import { ViewTransitions } from "next-view-transitions";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -15,7 +16,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        <ViewTransitions>{children}</ViewTransitions>
+      </body>
     </html>
   );
 }

@@ -3,8 +3,8 @@ import Image from "next/image";
 import styles from "./login.module.scss";
 import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
-import Input from "@/commonComponents/uikit/Input";
-import ButtonComp from "@/commonComponents/uikit/Button";
+import Input from "@/commonComponents/uikit/Input/Input";
+import ButtonComp from "@/commonComponents/uikit/Button/Button";
 
 function LoginPage() {
   function submitHandler(e) {

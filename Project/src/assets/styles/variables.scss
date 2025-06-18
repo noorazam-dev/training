@@ -1,13 +1,16 @@
 // COLORS
 $primary-color: #ff5733;
+$secondary-color: #000000;
 $text-color: #747474;
 $background-dark: #131313;
 $white: #ffffff;
 
 // TYPOGRAPHY
+$font-sm: 14px;
 $font-base: 16px;
 $font-md: 20px;
 $font-lg: 28px;
+$font-xl: 40px;
 
 // BORDER
 $radius-sm: 6px;
@@ -17,7 +20,7 @@ $radius-md: 10px;
 $spacing-sm: 10px;
 $spacing-md: 20px;
 $spacing-lg: 40px;
-
+ 
 // BREAKPOINTS
 $breakpoint-sm: 600px;
 $breakpoint-md: 800px;

@@ -1,0 +1,13 @@
+@import "../../assets/styles/mixin.scss";
+@import "../../assets/styles/variables.scss";
+
+.heading {
+  font-size: $font-xl;
+  text-align: center;
+  color: $secondary-color;
+  margin-bottom: $spacing-md;
+}
+
+.flex {
+@include center;
+}
