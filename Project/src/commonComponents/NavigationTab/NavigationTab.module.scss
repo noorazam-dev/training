@@ -1,42 +1,56 @@
+// first y-axis =  view transition only chrome
 @import "../../assets/styles/mixin.scss";
 
 .header {
-  background: rgb(255, 110, 110);
+  background: rgb(170, 170, 170);
   padding: 3rem;
   @include center;
 }
 
-.customTabs .ant-tabs-tab {
-  border-radius: 5px;
-  padding: 6px 16px;
-  transition: background-color 0.3s ease;
-  font-weight: bold;
-}
+// .customTabs .ant-tabs-tab {
+//   // border-radius: 5px;
+//   // padding: 6px 16px;
+//   // transition: background-color 0.3s ease;
+//   // font-weight: bold;
+// }
 
 .contentArea {
-  padding: 1rem;
-  min-height: 300px;
   position: relative;
+  background: linear-gradient(135deg, #ffe3d3, #fff);
 }
 
-.tabPaneWrapper {
-  position: relative;
- }
+// .tabPaneWrapper {
+//   position: relative;
+//   min-height: 300px;
+// }
 
 .tabPane {
   position: absolute;
   width: 100%;
-  }
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  will-change: opacity, transform;
+}
 
 .tabPane.active {
   opacity: 1;
-  pointer-events: auto;
   transform: translateY(0);
+  pointer-events: auto;
+  z-index: 1;
 }
 
 
 
 
+
+
+
+
+// Shred zoomIn fadeIn
 // @import "../../assets/styles/mixin.scss";
 
 // .header {
@@ -68,16 +82,4 @@
 //   width: 100%;
 //   top: 0;
 //   left: 0;
-//   opacity: 0;
-//   transform: translateY(10px);
-//   transition: opacity 0.3s ease, transform 0.3s ease;
-//   pointer-events: none;
-//   will-change: opacity, transform;
-// }
-
-// .tabPane.active {
-//   opacity: 1;
-//   transform: translateY(0);
-//   pointer-events: auto;
-//   z-index: 1;
 // }
