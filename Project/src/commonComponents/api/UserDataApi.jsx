@@ -21,7 +21,6 @@ export default function UserDataApi() {
 
   return (
     <div className={styles.container}>
-      {/* Optional title */}
       <h1 className={styles.title}>User List</h1>
 
       <div className={styles.grid}>
