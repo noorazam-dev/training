@@ -2,11 +2,7 @@ import "./globals.scss";
 import { Poppins } from "next/font/google";
 import { ViewTransitions } from "next-view-transitions";
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "600"],
-  variable: "--font-poppins",
-});
+const poppins = Poppins({ weight: ["400", "600"], subsets: ["latin"] });
 
 export const metadata = {
   title: "My Form",

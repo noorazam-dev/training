@@ -1,85 +1,161 @@
-// first y-axis =  view transition only chrome
+// // Next view transition
+// @import "../../assets/styles/mixin.scss";
+// // Header
+// .header {
+//   background: linear-gradient(90deg, #3a0ca3, #7209b7);
+//   padding: 2rem;
+//   @include center;
+//   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+// }
+
+// // Tabs styling
+// .customTabs {
+//   .ant-tabs-nav {
+//     margin-bottom: 0 !important;
+//   }
+//   .ant-tabs-tab {
+//     padding: 8px 24px;
+//     font-size: 1.2rem;
+//     font-weight: 600;
+//     color: #fff;
+//     border-radius: 8px;
+//     background-color: rgba(255, 255, 255, 0.1);
+//     border: none;
+//     transition: all 0.3s ease;
+
+//     &:hover {
+//       background-color: rgba(255, 255, 255, 0.2);
+//     }
+//   }
+//   .ant-tabs-tab-active {
+//     background-color: #f72585 !important;
+//     color: #fff !important;
+//   }
+//   .ant-tabs-ink-bar {
+//     background: #f72585;
+//   }
+// }
+
+// // Content area
+// .contentArea {
+//   position: relative;
+//   backdrop-filter: blur(10px);
+//   background: linear-gradient(135deg, #f9f5ff, #f3eaff);
+//   padding: 2rem;
+//   min-height: 400px;
+//   font-family: "Poppins", sans-serif;
+//   font-size: 1.05rem;
+//   color: #2c2c2c;
+//   border-radius: 12px;
+//   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+// }
+
+// // Tab pane wrapper
+// .tabPaneWrapper {
+//   position: relative;
+//   min-height: 400px;
+//   overflow: hidden;
+//   will-change: transform, opacity;
+// }
+
+// //  ViewTransition Timing on Group
+// ::view-transition-group(tab-content) {
+//   animation-duration: 5s;
+//   animation-timing-function: cubic-bezier(0.2,0.8,0.2,1);
+//   animation-fill-mode: both;
+// }
+
+// ::view-transition-old(tab-content) {
+//   animation-name: fadeZoomOut;
+// }
+// ::view-transition-new(tab-content) {
+//   animation-name: fadeZoomIn;
+// }
+
+// // Keyframes
+// @keyframes fadeZoomOut {
+//   0% {
+//     opacity: 1;
+//     transform: scale(1) translateY(0);
+//   }
+//   100% {
+//     opacity: 0;
+//     transform: scale(0.7) translateY(-20px);
+//   }
+// }
+
+// @keyframes fadeZoomIn {
+//   0% {
+//     opacity: 0;
+//     transform: scale(1.3) translateY(20px);
+//   }
+//   50% {
+//     opacity: 0.4;
+//     transform: scale(1.1) translateY(5px);
+//   }
+//   100% {
+//     opacity: 1;
+//     transform: scale(1) translateY(0);
+//   }
+// }
+
+// Framer motion
 @import "../../assets/styles/mixin.scss";
 
 .header {
-  background: rgb(170, 170, 170);
-  padding: 3rem;
+  background: linear-gradient(90deg, #3a0ca3, #7209b7);
+  padding: 2rem;
   @include center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-// .customTabs .ant-tabs-tab {
-//   // border-radius: 5px;
-//   // padding: 6px 16px;
-//   // transition: background-color 0.3s ease;
-//   // font-weight: bold;
-// }
+.customTabs {
+  .ant-tabs-nav {
+    margin-bottom: 0 !important;
+  }
+  .ant-tabs-tab {
+    padding: 8px 24px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  .ant-tabs-tab-active {
+    background-color: #f72585 !important;
+    color: white !important;
+  }
+  .ant-tabs-ink-bar {
+    background: #f72585;
+  }
+}
 
 .contentArea {
   position: relative;
-  background: linear-gradient(135deg, #ffe3d3, #fff);
+  backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, #f9f5ff, #f3eaff);
+  padding: 2rem;
+  min-height: 400px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
 }
 
-// .tabPaneWrapper {
-//   position: relative;
-//   min-height: 300px;
-// }
+.tabPaneWrapper {
+  position: relative;
+  min-height: 400px;
+  overflow: hidden;
+}
 
-.tabPane {
-  position: absolute;
+// use a normal static container inside .tabPaneWrapper
+.motionContent {
   width: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  pointer-events: none;
-  will-change: opacity, transform;
 }
-
-.tabPane.active {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-  z-index: 1;
-}
-
-
-
-
-
-
-
-
-// Shred zoomIn fadeIn
-// @import "../../assets/styles/mixin.scss";
-
-// .header {
-//   background: rgb(255, 110, 110);
-//   padding: 3rem;
-//   @include center;
-// }
-
-// .customTabs .ant-tabs-tab {
-//   border-radius: 5px;
-//   padding: 6px 16px;
-//   transition: background-color 0.3s ease;
-//   font-weight: bold;
-// }
-
-// .contentArea {
-//   padding: 1rem;
-//   min-height: 300px;
-//   position: relative;
-// }
-
-// .tabPaneWrapper {
-//   position: relative;
-//   min-height: 300px;
-// }
-
-// .tabPane {
-//   position: absolute;
-//   width: 100%;
-//   top: 0;
-//   left: 0;
-// }

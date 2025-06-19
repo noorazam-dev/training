@@ -9,11 +9,10 @@
 
 .container {
   display: flex;
-  gap: $spacing-md;
-  padding: 10px;
+  gap: $spacing-lg;
+  padding:0 $spacing-md;
   margin-bottom: 20px;
-  max-width: 1300px;
-  width: 100%;
+  justify-content: center;
 }
 
 .card {
@@ -24,6 +23,7 @@
   transition: transform 0.3s ease;
   text-align: center;
   width: 100%;
+  max-width: 420px;
   cursor: default;
 
   &:hover {
@@ -47,4 +47,29 @@
   font-size: $font-md;
   color: $primary-color;
   font-weight: 600;
+}
+
+// 📱 Mobile (up to 768px)
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+// 💻 Tablet (769px–1024px)
+@media (min-width: 767px) and (max-width: 1024px) {
+  .container {
+    justify-content: center;
+    flex-direction: row;
+    gap: $spacing-sm;
+  }
+
+  .card {
+    width: 45%;
+  }
 }
